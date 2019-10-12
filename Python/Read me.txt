@@ -1,0 +1,10 @@
+This program might not run if pillow is not installed
+
+Steps to install Pillow
+
+1. Go to command prompt and type   cd\ 
+2. Press Enter and browse and copy the python file location from your computer like  C:\Users\Atharva\AppData\Local\Programs\Python\Python37-32
+3. Again press enter and type the following code python.exe -m pip install --upgrade pip
+4. Agin press enter and type python.exe -m pip install pillow
+5. Now you can run the program
+6. Remember to copy the Entire folder and paste it in D drive
