@@ -1,0 +1,57 @@
+a=b=3
+c=d=0
+
+print("Side1:\nMan :",a," Lion :",b)
+print("Now On next Side:\nMan :",c," Lion :",d)
+
+Man="Man "
+Lion="Lion "
+
+def fun(traveller1, traveller2, a,b,c,d,flag):
+    boat=traveller1+traveller2
+    if flag==0:
+        b-=1
+        print("\nSide1:\n""Man :",a," Lion :",b)
+        print("In Boat",boat)
+        d+=1
+    else:
+        a-=1
+        print("\nSide1:\n""Man :",a," Lion :",b)
+        print("In Boat",boat)
+        c+=1 
+    print("Now On next Side:\nMan :",c," Lion :",d)
+    return a,b,c,d
+
+a-=1
+fun(Man,Lion,a,b,c,d,0)
+b-=1
+d+=1
+boat="Going back with"+Man
+
+while b>0:
+    if a==b or a==0:
+        fun(Man,Lion,a,b,c,d,0)
+        b-=1
+        d+=1
+        boat="Going back with"+Man
+        if(b==0):
+            print("Man lands from the boat\n")
+            c+=1
+            print("Now On next Side:\nMan :",c," Lion :",d)
+
+    if(a>b):
+        fun(Man,Man,a,b,c,d,1)
+        a-=1
+        c+=1
+        d-=1
+        boat="Going back with"+Man+Lion
+        print(boat+"Now On next Side:\nMan :",c," Lion :",d)
+        b+=1
+        print("Side1:\n""Man :",a," Lion :",b)
+
+    if b>a and a!=0:
+        fun(Man,Man,a,b,c,d,1)
+        a-=1
+        c+=1
+        boat="Going back with"+Man
+        print(boat)
